@@ -10,14 +10,14 @@ public class Principal {
 			
 			if(cliente.estaConectado()) {
 				//cliente.cadastrarCliente("Maria da Silva", "11144458952", "21994962587", "maria@ibm.com.br");
-				cliente.listarClientes();
+				//cliente.listarClientes();
 				System.out.println("Conexão foi estabelecida!");
 			} else {
 				System.out.println("Não foi possível estabelecer uma conexão.");
 			}
 			
 			if(estoque.estaConectado()) {
-				estoque.listarProdutos();
+				//estoque.listarProdutos();
 				System.out.println("Conexão estabelecida!");
 			} else {
 				System.out.println("Não foi possível estabelecer uma conexão.");
