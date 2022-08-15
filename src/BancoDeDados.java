@@ -1,33 +1,34 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class BancoDeDados {
-	private Connection connection = null;
-	private java.sql.Statement statement = null;
+	Connection conn = null;
+    Statement stmt = null;
 	private ResultSet resultSet = null;
 	
-	public void conectar() {
-		
-		String servidor = "jdbc:mysql://localhost/ibm";	
+	public void conectar() {		
+		String servidor = "jdbc:mysql://localhost/ibm";		
 		String usuario = "root";		
 		String senha = "mysql";		
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		try {			
 			Class.forName(driver);
-			this.connection=DriverManager.getConnection(servidor, usuario, senha);			
-			this.statement=this.connection.createStatement();
+			conn = DriverManager.getConnection(servidor, usuario, senha);			
+			stmt = conn.createStatement();
 		} catch(Exception e) {
 			System.out.println("erro:" + e.getMessage());
 		}
-	}
-			
+	}	
+	
 		public boolean estaConectado() {
-			if(this.connection != null) {
+			if(this.conn != null) {
 				return true;
 			} else {
 				return false;
 			}
-		}
+		}		
+		
 };
