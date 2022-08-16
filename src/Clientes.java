@@ -73,5 +73,16 @@ public class Clientes {
 		// DELETE
 		
 		// UPDATE
+		
+		public void editarContatos(String id, String nome, String cpf, String telefone, String email) {
+			try {
+				String consulta = "update clientes set nome_cliente='"+nome+"', cpf_cliente= '"+cpf+"', telefone_cliente='"+telefone+"', email_cliente='"+email+"'  where id_client= "+id+";";
+				System.out.println(consulta);
+				System.out.println(this.stmt);
+				this.stmt.executeUpdate(consulta);
+			} catch (Exception e) {
+				System.out.println("Error: "+ e.getMessage());
+			}
+		}
 	
 }
