@@ -1,0 +1,25 @@
+	import java.sql.Connection;
+	import java.sql.DriverManager;
+	import java.sql.ResultSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BancoDeDados bd = new BancoDeDados();
+		bd.conectar();
+		
+		if(bd.estaConectado()) {
+		System.out.println("Funciona porra");
+		
+		
+		bd.editarContatos(4, "Lucahal", null, null, null);
+		
+
+		} else {
+			System.out.println("Conecção falha");
+		}
+	}
+	
+
+
+}
