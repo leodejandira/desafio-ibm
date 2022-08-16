@@ -32,32 +32,33 @@ public class Clientes {
 		}
 		
 		// READ
-		public void listarClientes() {			
-			try {				
-				String query = "select * from clientes";
-				this.resultSet = this.stmt.executeQuery(query);				
-				this.stmt = this.conn.createStatement();	
-				
+		// Ler todos os clientes
+		public void listarClientes() {
+			// Criando o processo de tratamento dos comando no banco de dados
+			try {
+				//Criando uma variável para a sintaxe em sql
+				String query = "select * from clientes ";
+				this.resultSet = this.stmt.executeQuery(query);
+				this.stmt=this.conn.createStatement();
+				//Criando um laço de repetição para retornar os registros da nossa tabela
 				while(this.resultSet.next()) {
-				
-				
-					String idCliente = resultSet.getString("id_client");
-					String nomeCliente = resultSet.getString("nome_cliente");
-					String cpfCliente = resultSet.getString("cpf_cliente");
-					String telefoneCliente = resultSet.getString("telefone_cliente");					
-					String emailCliente = resultSet.getString("email_cliente");				
-					System.out.println("ID: " + idCliente);
-					System.out.println("Nome completo: " + nomeCliente);
-					System.out.println("CPF: " + cpfCliente);
-					System.out.println("Telefone: " + telefoneCliente);		
-					System.out.println("Email: " + emailCliente);	
-					
-				}			 
-			
-			} catch(Exception e) {
-				System.out.println("Erro:" + e.getMessage());
+					//iniciando as Variáveis cliente
+					VariaveisCliente c = new VariaveisCliente();
+					//Setando as informações do MySQL para uma variável cliente
+					c.setId(resultSet.getString("id_client"));
+					c.setNome(resultSet.getString("nome_cliente"));
+					c.setCpf(resultSet.getString("cpf_cliente")); 
+					c.setTelefone(resultSet.getString("telefone_cliente"));
+					c.setEmail(resultSet.getString("email_cliente")); 
+					//Mostrando no console os registros encontrados
+					System.out.println("Id: "+c.getId()+" Nome: "+c.getNome());
+					System.out.println("CPF:"+c.getCpf()+" Telefone: "+c.getTelefone());
+					System.out.println("Email: "+c.getEmail()+"\n\n");
+				}
+				}catch(Exception e ) {
+					System.out.println("Erro"+e.getMessage()+"\n\n");
+				}
 			}
-		}
 		
 				
 		// CREATE
