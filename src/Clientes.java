@@ -73,6 +73,17 @@ public class Clientes {
 		
 		// DELETE
 		
+		public void deletarclientes(String id, String confirma) {
+			try {
+				String query="delete from clientes where id_client="+id+";";
+				System.out.println(query);
+				this.stmt.executeUpdate(query);
+			
+			}catch(Exception e){
+				System.out.println(e.getMessage());
+			}
+		}
+		
 		// UPDATE
 		
 		public void editarContatos(String id, String nome, String cpf, String telefone, String email) {
