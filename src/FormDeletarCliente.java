@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 
 public class FormDeletarCliente extends JFrame {
 
@@ -86,5 +87,10 @@ public class FormDeletarCliente extends JFrame {
 		bntDeletarCliente.setFont(new Font("Tahoma", Font.BOLD, 12));
 		bntDeletarCliente.setBounds(195, 216, 89, 23);
 		contentPane.add(bntDeletarCliente);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(FormDeletarCliente.class.getResource("/ViewImagens/PlanoFuntoTelaUpdate.jpg")));
+		lblNewLabel_1.setBounds(0, 0, 445, 272);
+		contentPane.add(lblNewLabel_1);
 	}
 }

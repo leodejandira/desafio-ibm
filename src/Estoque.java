@@ -80,7 +80,7 @@ public class Estoque {
 			// CREATE 
 			public void cadastrarProduto(String nomeProduto, String valorUnitario, String categoriaProduto, String codMarca, String generico) {
 				try {
-					String query = "insert into clientes values (null, '"+nomeProduto+"', '"+valorUnitario+"', '"+categoriaProduto+"', '"+codMarca+"', '"+generico+"')";
+					String query = "insert into produtos values (null, '"+nomeProduto+"', '"+valorUnitario+"', '"+categoriaProduto+"', '"+codMarca+"', '"+generico+"')";
 					this.stmt.executeUpdate(query);
 				} catch (Exception e) {
 					System.out.println("Erro: " + e.getMessage());
