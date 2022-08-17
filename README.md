@@ -7,7 +7,7 @@ Assim, foi criada uma rotina CRUD que permite:
 - Atualização de dados dos clientes
 - Exclusão de clientes
 
-## Rotas da aplicação:
+## Rotas da aplicação
 - **`GET clientes`**: rota que retorna listagem de todos os clientes, com os campos de ID, nome, CPF, telefone e email
 
 - **`GET produtos`**: rota que retorna listagem de todos os produtos, com os campos de ID, nome do produto, valor unitário, categoria do produto, ID da marca e se é genérico ou não. Se o produto for genérico, é retornado o valor unitário original e o valor com um desconto de 20%
@@ -22,7 +22,7 @@ Assim, foi criada uma rotina CRUD que permite:
 
 - **`DELETE clientes`**: rota que permite deletar o cliente passando como parâmetro seu ID
 
-## Tecnologias utilizadas:
+## Tecnologias utilizadas
 - Java
 - JFrame
 - MySQL
@@ -35,7 +35,7 @@ Para utilizar a aplicação, é preciso fazer uma cópia para a sua máquina. No
 
 ⚠️ Para evitar erros de compilação ao utilizar o Eclipse, criar um novo projeto Java e importar todos os arquivos **exceto** os arquivos _.project_ e _.classpath_. 
 
-## Autores:
+## Autores
 - Filipe Miranda
 - Isabela Telles
 - Leonardo Guimarães
