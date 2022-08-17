@@ -16,6 +16,8 @@ Assim, foi criada uma rotina CRUD que permite:
 
 - **`POST clientes`**: rota que permite cadastrar um novo cliente, passando como parâmetro o nome, CPF, telefone e email
 
+- - **`POST produtos`**: rota que permite cadastrar um novo produto a partir dos parâmetros nome do produto, valor unitário, categoria do produto, ID da marca e se é genérico ou não
+
 - **`UPDATE clientes`**: rota que permite atualizar os campos de cliente
 
 - **`DELETE clientes`**: rota que permite deletar o cliente passando como parâmetro seu ID
