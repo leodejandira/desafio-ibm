@@ -17,6 +17,9 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class FormListarCliente extends JFrame {
 
@@ -62,7 +65,7 @@ public class FormListarCliente extends JFrame {
 		));
 		table.setBounds(44, 76, 348, 151);
 		contentPane.add(table);
-		
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS); 
 		JButton btnNewButton = new JButton("Mostrar tabela");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -100,4 +103,15 @@ public class FormListarCliente extends JFrame {
 		btnNewButton.setBounds(52, 42, 134, 23);
 		contentPane.add(btnNewButton);
 		
-	}}
+		JLabel lblNewLabel = new JLabel("Lista de Clientes");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel.setBounds(163, 11, 104, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(FormListarCliente.class.getResource("/ViewImagens/PlanoFuntoTelaUpdate.jpg")));
+		lblNewLabel_1.setBounds(0, 0, 434, 261);
+		contentPane.add(lblNewLabel_1);
+		
+	}	
+}
