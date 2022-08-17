@@ -9,10 +9,15 @@ Assim, foi criada uma rotina CRUD que permite:
 
 ## Rotas da aplicação:
 - **`GET clientes`**: rota que retorna listagem de todos os clientes, com os campos de ID, nome, CPF, telefone e email
-- **`GET produtos`**: rota que retorna listagem de todos os produtos, com os campos de ID, nome do produto, valor unitário, categoria do produto, ID da marca e se é genérico ou não
+
+- **`GET produtos`**: rota que retorna listagem de todos os produtos, com os campos de ID, nome do produto, valor unitário, categoria do produto, ID da marca e se é genérico ou não. Se o produto for genérico, é retornado o valor unitário original e o valor com um desconto de 20%
+
 - **`POST clientes`**: rota que permite cadastrar um novo cliente, passando como parâmetro o nome do produto, valor unitário, categoria do produto, ID da marca e se é genérico ou não
+
 - **`POST clientes`**: rota que permite cadastrar um novo cliente, passando como parâmetro o nome, CPF, telefone e email
+
 - **`UPDATE clientes`**: rota que permite atualizar os campos de cliente
+
 - **`DELETE clientes`**: rota que permite deletar o cliente passando como parâmetro seu ID
 
 ## Tecnologias utilizadas:
