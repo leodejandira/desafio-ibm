@@ -18,7 +18,7 @@ Para utilizar a aplicação, é preciso fazer uma cópia para a sua máquina. No
 
 > git clone https://github.com/liratisa/desafio-ibm.git
 
-⚠️ Para evitar erros de compilação ao utilizar o Eclipse, criar um novo projeto Java e importar todos os arquivos *exceto* os arquivos _.project_ e _.classpath_. 
+⚠️ Para evitar erros de compilação ao utilizar o Eclipse, criar um novo projeto Java e importar todos os arquivos **exceto** os arquivos _.project_ e _.classpath_. 
 
 ## Autores:
 - Filipe Miranda
