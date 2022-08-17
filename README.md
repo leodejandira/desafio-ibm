@@ -7,6 +7,9 @@ Assim, foi criada uma rotina CRUD que permite:
 - Atualização de dados dos clientes
 - Exclusão de clientes
 
+## Modelagem do banco de dados
+<img src="/src/ViewImagens/bancoRelacional.png" alt="Modelagem do banco de dados">
+
 ## Rotas da aplicação
 - **`GET clientes`**: rota que retorna listagem de todos os clientes, com os campos de ID, nome, CPF, telefone e email
 
