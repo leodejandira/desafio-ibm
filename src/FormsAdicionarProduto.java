@@ -14,7 +14,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
 public class FormsAdicionarProduto extends JFrame {
-
+	
 	private JPanel contentPane;
 	private JTextField textProduto;
 	private JTextField textCategoria;
@@ -89,10 +89,13 @@ public class FormsAdicionarProduto extends JFrame {
 		lblNewLabel_3.setBounds(176, 192, 82, 14);
 		contentPane.add(lblNewLabel_3);
 		
+		// inserindo novos produtos	
+		
+		final Estoque bd = new Estoque();
+		
 		JButton btnSalvarNovoProduto = new JButton("Salvar");
 		btnSalvarNovoProduto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Estoque bd = new Estoque();
 				bd.conectar();
 				
 				//String idtexto = textID.getText();
@@ -101,8 +104,7 @@ public class FormsAdicionarProduto extends JFrame {
 				String categoria = textCategoria.getText();
 				String generico = textGenerico.getText();
 				//int id = Integer.parseInt(idtexto);
-				String marca = textMarca.getText();
-				
+				String marca = textMarca.getText();			
 				
 				
 				if(bd.estaConectado()) {
